@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.2.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"
+    default-lazy-init="true"
+>
+
+    <bean id="clientService1" class="com.ysuturin.springdoc.example2.ClientService"
+          factory-method="createInstance"
+          lazy-init="false"
+    >
+        <constructor-arg value="Software Development"/>
+    </bean>
+
+    <bean id="clientService2" class="com.ysuturin.springdoc.example2.ClientService"
+          factory-method="createInstance"
+    >
+        <constructor-arg value="Software Development2"/>
+    </bean>
+
+    <bean id="businessService1" class="com.ysuturin.springdoc.example2.BusinessService"
+          factory-method="createInstance"
+    >
+        <constructor-arg value="Luxoft"/>
+    </bean>
+
+    <bean id="businessService2" class="com.ysuturin.springdoc.example2.BusinessService"
+          factory-method="createInstance"
+    >
+        <constructor-arg value="OTP"/>
+    </bean>
+
+    <bean id="serviceFactory" class="com.ysuturin.springdoc.example2.DefaultServiceFactory" />
+    <bean id="clientService3" class="com.ysuturin.springdoc.example2.ClientService"
+          factory-bean="serviceFactory" factory-method="createClientServiceInstance" >
+        <constructor-arg value="Retailing" />
+    </bean>
+    <bean id="clientService4" class="com.ysuturin.springdoc.example2.ClientService"
+          factory-bean="serviceFactory" factory-method="createClientServiceInstance" >
+        <constructor-arg value="Software Development" />
+    </bean>
+
+    <bean class="PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:example2/mail.properties" />
+    </bean>
+
+    <bean id="clientService5" class="com.ysuturin.springdoc.example2.ClientService"
+          factory-bean="serviceFactory" factory-method="createClientServiceInstance" >
+        <constructor-arg value="${smtp.host}" />
+    </bean>
+
+</beans>
