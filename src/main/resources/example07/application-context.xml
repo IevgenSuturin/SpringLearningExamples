@@ -10,6 +10,7 @@
     http://www.springframework.org/schema/context/spring-context-4.2.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"
 >
     <bean id="initHelloWorld" class="com.ysuturin.springdoc.example07.InitHelloWorld" />
+    <bean id="initHelloWorld2" class="com.ysuturin.springdoc.example07.InitHelloWorld2" />
     <bean id="bean1" class="com.ysuturin.springdoc.example07.Bean1" init-method="init" />
     <bean id="bean2" class="com.ysuturin.springdoc.example07.Bean2" init-method="thisIsMyCustomInitMethod" />
 </beans>

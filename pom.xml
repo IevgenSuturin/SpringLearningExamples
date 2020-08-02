@@ -24,6 +24,7 @@
 
     <dependencies>
 
+<!--        Spring framework-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -42,6 +43,19 @@
 <!--            <version>4.12</version>-->
 <!--        </dependency>-->
 
+<!--        Spring AOP-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>5.1.3.RELEASE</version>
+        </dependency>
+
+<!--        Spring aspects-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>5.1.3.RELEASE</version>
+        </dependency>
     </dependencies>
 
 </project>

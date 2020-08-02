@@ -16,15 +16,15 @@ public class Bean1 implements InitializingBean, DisposableBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println("Inside afterPropertiesSet method");
+        System.out.println("class Bean1: Inside afterPropertiesSet method");
     }
 
     public void init(){
-        System.out.println("User custom init method for ExlTestBean");
+        System.out.println("class Bean1: User custom init method for ExlTestBean");
     }
 
     public void cleanup(){
-        System.out.println("User custom init cleanup for ExlTestBean");
+        System.out.println("class Bean1: User custom init cleanup for ExlTestBean");
     }
 
 }
