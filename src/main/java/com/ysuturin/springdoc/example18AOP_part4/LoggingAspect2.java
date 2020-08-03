@@ -14,7 +14,7 @@ public class LoggingAspect2 {
         System.out.println("---->");
     }
 
-    @Before("allGetters")
+    @Before("allGetters()")
     public void loggingAdviceGetter(){
         System.out.println("---> Advice run. A getter method will be called from LoggingAspect2");
     }

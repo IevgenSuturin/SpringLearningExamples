@@ -46,7 +46,7 @@
 
     <bean id="circle" class="com.ysuturin.springdoc.example18AOP_part4.Circle">
         <property name="center" ref="point0" />
-        <property name="radius" ref="1.0" />
+        <property name="radius" value="1.0" />
     </bean>
 
     <bean id="loggingAspect1" class="com.ysuturin.springdoc.example18AOP_part4.LoggingAspect1" />

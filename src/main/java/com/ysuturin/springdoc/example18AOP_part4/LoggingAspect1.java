@@ -29,7 +29,7 @@ public class LoggingAspect1 {
     @Pointcut("within(com.ysuturin.springdoc.example18AOP_part4.Circle)")
     public void allCircleMethod(){}
 
-    @After("allCircleMethod")
+    @After("allCircleMethod()")
     public void loggingAdvice(JoinPoint joinPoint){
         System.err.println("Advice run. A circle method has been called.");
         System.err.println(joinPoint.toString());
